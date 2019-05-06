@@ -11,7 +11,6 @@ import org.springframework.web.client.RestTemplate;
 @Controller
 @RequestMapping(path="/api")
 public class ForecastController {
-    private static final Logger log = LoggerFactory.getLogger(ForecastController.class);
 
     private RestTemplate restTemplate = new RestTemplate();
 
@@ -32,8 +31,7 @@ public class ForecastController {
     @GetMapping(path="/forecast")
     public @ResponseBody Forecast getForecast(@RequestParam double latitude, @RequestParam double longitude) {
         if (forecastRepository.existsByLatitudeAndLongitude(latitude, longitude)) {
-            Forecast forecast = forecastRepository.findByLatitudeAndLongitude(latitude,longitude);
-            return forecast;
+            return forecastRepository.findByLatitudeAndLongitude(latitude,longitude);
         } else {
             Forecast forecast = restTemplate.getForObject(
                     "https://api.darksky.net/forecast/21555dff0ae2af8abca7aa189973ef7a/" + latitude + "," + longitude, Forecast.class);
