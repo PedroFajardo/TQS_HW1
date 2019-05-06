@@ -17,6 +17,9 @@ public class Forecast {
     @OneToOne
     private Daily daily;
 
+    /**
+     * Needed for JPA
+     */
     public Forecast(){}
 
     public Long getId() {
