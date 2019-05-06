@@ -21,6 +21,11 @@ public class Forecast {
         //Needed for JPA
     }
 
+    public Forecast(double latitude, double longitude){
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
+
     public Long getId() {
         return id;
     }
