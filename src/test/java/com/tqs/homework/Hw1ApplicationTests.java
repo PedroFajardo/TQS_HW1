@@ -1,4 +1,4 @@
-package com.TQS.homework;
+package com.tqs.homework;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

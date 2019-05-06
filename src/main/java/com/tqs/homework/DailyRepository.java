@@ -1,4 +1,4 @@
-package com.TQS.homework;
+package com.tqs.homework;
 
 import org.springframework.data.repository.CrudRepository;
 
