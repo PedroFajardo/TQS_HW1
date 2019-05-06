@@ -20,14 +20,14 @@ public class ForecastController {
     private DataRepository dataRepository;
 
     @GetMapping(path="/all")
-    private @ResponseBody Iterable<Forecast> getAllForecasts() {
+    public @ResponseBody Iterable<Forecast> getAllForecasts() {
         // This returns a JSON or XML with the users
         return forecastRepository.findAll();
     }
 
 
     @GetMapping(path="/forecast")
-    private @ResponseBody Forecast getForecast(@RequestParam double latitude, @RequestParam double longitude) {
+    public @ResponseBody Forecast getForecast(@RequestParam double latitude, @RequestParam double longitude) {
         if (forecastRepository.existsByLatitudeAndLongitude(latitude, longitude)) {
             return forecastRepository.findByLatitudeAndLongitude(latitude,longitude);
         } else {
