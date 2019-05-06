@@ -16,20 +16,8 @@ public class Forecast {
     private String timezone;
     @OneToOne
     private Daily daily;
-    /*private Minutely minutely;
-    private Hourly hourly;
-    private Daily daily;
-    private ArrayList<Alert> alerts = new ArrayList<>();
-    */
 
     public Forecast(){}
-
-    public Forecast(double latitude, double longitude, String timezone, Data currently) {
-        this.latitude = latitude;
-        this.longitude = longitude;
-        this.timezone = timezone;
-        this.daily = daily;
-    }
 
     public Long getId() {
         return id;

@@ -53,47 +53,6 @@ public class Data {
     private double apparentTemperatureMax;
     private int apparentTemperatureMaxTime;
 
-    public Data(int time, String summary, String icon, int sunriseTime, int sunsetTime, double moonPhase, double precipIntensity, double precipIntensityMax, int precipIntensityMaxTime, double precipProbability, String precipType, double temperatureHigh, int temperatureHighTime, double temperatureLow, int temperatureLowTime, double apparentTemperatureHigh, int apparentTemperatureHighTime, double apparentTemperatureLow, int apparentTemperatureLowTime, double dewPoint, double humidity, double pressure, double windSpeed, double windGust, int windGustTime, int windBearing, double cloudCover, int uvIndex, int visibility, double ozone, double temperatureMin, int temperatureMinTime, double temperatureMax, int temperatureMaxTime, double apparentTemperatureMin, int apparentTemperatureMinTime, double apparentTemperatureMax, int apparentTemperatureMaxTime) {
-        this.time = time;
-        this.summary = summary;
-        this.icon = icon;
-        this.sunriseTime = sunriseTime;
-        this.sunsetTime = sunsetTime;
-        this.moonPhase = moonPhase;
-        this.precipIntensity = precipIntensity;
-        this.precipIntensityMax = precipIntensityMax;
-        this.precipIntensityMaxTime = precipIntensityMaxTime;
-        this.precipProbability = precipProbability;
-        this.precipType = precipType;
-        this.temperatureHigh = temperatureHigh;
-        this.temperatureHighTime = temperatureHighTime;
-        this.temperatureLow = temperatureLow;
-        this.temperatureLowTime = temperatureLowTime;
-        this.apparentTemperatureHigh = apparentTemperatureHigh;
-        this.apparentTemperatureHighTime = apparentTemperatureHighTime;
-        this.apparentTemperatureLow = apparentTemperatureLow;
-        this.apparentTemperatureLowTime = apparentTemperatureLowTime;
-        this.dewPoint = dewPoint;
-        this.humidity = humidity;
-        this.pressure = pressure;
-        this.windSpeed = windSpeed;
-        this.windGust = windGust;
-        this.windGustTime = windGustTime;
-        this.windBearing = windBearing;
-        this.cloudCover = cloudCover;
-        this.uvIndex = uvIndex;
-        this.visibility = visibility;
-        this.ozone = ozone;
-        this.temperatureMin = temperatureMin;
-        this.temperatureMinTime = temperatureMinTime;
-        this.temperatureMax = temperatureMax;
-        this.temperatureMaxTime = temperatureMaxTime;
-        this.apparentTemperatureMin = apparentTemperatureMin;
-        this.apparentTemperatureMinTime = apparentTemperatureMinTime;
-        this.apparentTemperatureMax = apparentTemperatureMax;
-        this.apparentTemperatureMaxTime = apparentTemperatureMaxTime;
-    }
-
     public Data(){}
 
     public Long getId() {

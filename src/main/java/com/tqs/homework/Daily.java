@@ -17,12 +17,6 @@ public class Daily {
     @OneToMany
     private List<Data> data;
 
-    public Daily(String summary, String icon, List<Data> data) {
-        this.summary = summary;
-        this.icon = icon;
-        this.data = data;
-    }
-
     public Daily(){}
 
     public Long getId() {
