@@ -53,8 +53,9 @@ public class Data {
     private double apparentTemperatureMax;
     private int apparentTemperatureMaxTime;
 
-    //Needed for JPA
-    public Data(){}
+    public Data(){
+        //Needed for JPA
+    }
 
     public Long getId() {
         return id;

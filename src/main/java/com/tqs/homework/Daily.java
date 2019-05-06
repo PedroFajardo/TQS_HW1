@@ -17,8 +17,9 @@ public class Daily {
     @OneToMany
     private List<Data> data;
 
-    //Needed for JPA
-    public Daily(){}
+    public Daily(){
+        //Needed for JPA
+    }
 
     public Long getId() {
         return id;

@@ -17,23 +17,4 @@ public class Hw1Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Hw1Application.class);
 	}
-
-	@Bean
-	public RestTemplate restTemplate(RestTemplateBuilder builder) {
-		return builder.build();
-	}
-
-	@Bean
-	public CommandLineRunner run(RestTemplate restTemplate, ForecastRepository forecastRepo, DailyRepository dailyRepo, DataRepository dataRepo) throws Exception {
-		return args -> {
-			Forecast forecast = restTemplate.getForObject(
-					"https://api.darksky.net/forecast/21555dff0ae2af8abca7aa189973ef7a/40.15621,8.85894", Forecast.class);
-			for (Data d : forecast.getDaily().getData())
-				dataRepo.save(d);
-			dailyRepo.save(forecast.getDaily());
-			forecastRepo.save(forecast);
-			log.info(forecast.toString());
-		};
-	}
-
 }

@@ -33,7 +33,6 @@ public class ForecastController {
     public @ResponseBody Forecast getForecast(@RequestParam double latitude, @RequestParam double longitude) {
         if (forecastRepository.existsByLatitudeAndLongitude(latitude, longitude)) {
             Forecast forecast = forecastRepository.findByLatitudeAndLongitude(latitude,longitude);
-            log.info(forecast.toString());
             return forecast;
         } else {
             Forecast forecast = restTemplate.getForObject(
@@ -43,7 +42,6 @@ public class ForecastController {
                 dataRepository.save(d);
             dailyRepository.save(forecast.getDaily());
             forecastRepository.save(forecast);
-            log.info(forecast.toString());
             return forecast;
         }
     }
